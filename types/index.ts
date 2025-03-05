@@ -4,7 +4,7 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
   size?: number;
 };
 export interface MoviesType {
-  categoryType: "popular";
+  categoryType: "popular" | "top";
   page: string;
 }
 
