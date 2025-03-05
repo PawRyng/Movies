@@ -1,9 +1,10 @@
 import PaginationSection from "@/components/pagination";
 import dynamic from 'next/dynamic';
 import { useMovies } from "@/controller/getMovies";
+import SkeletonList from "@/components/Listing/SkeletonList";
 
 const ServerComponent = dynamic(() => import('@/components/Listing/list'), {
-  loading: () => <p>Ładowanie komponentu...</p>,
+  loading: () => <SkeletonList/>,
   ssr: true,
 });
 
