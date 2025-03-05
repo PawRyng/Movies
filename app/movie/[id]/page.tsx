@@ -34,7 +34,7 @@ interface MovieProps {
                 <div className="avarage w-4/12 flex flex-col gap-2 pt-4 order-3 sm:max-w-max">
                     <p className="flex gap-4 items-center sm:max-w-max">
                         <StarIcon fill="#e8b903" width={50} height={50}/>
-                        <span className="text-4xl">{movie.vote_average}</span>
+                        <span className="text-4xl">{movie.vote_average.toFixed(2)}</span>
                     </p>
                     <p className="text-center">{movie.vote_count} votes</p>
 
