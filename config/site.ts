@@ -8,5 +8,13 @@ export const siteConfig = {
       label: "Home",
       href: "/",
     },
+    {
+      label: "Top Rated",
+      href: "/top",
+    },
+    {
+      label: "Popular",
+      href: "/popular",
+    },
   ],
 };

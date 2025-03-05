@@ -19,11 +19,11 @@ export default async function Popular({
   // Ensure that 'page' is always a string
   const currentPage = Array.isArray(page) ? page[0] : page || '1';
 
-  const {totalPages, movies} = await useMovies({categoryType: 'popular', page: currentPage});
+  const {totalPages, movies} = await useMovies({categoryType: 'top', page: currentPage});
 
 
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+    <section className="flex flex-col gap-4 py-8 md:py-10">
       <h1 className="text-2xl">Top rated</h1>
       <ServerComponent movies={movies} />
       <PaginationSection totalPages={totalPages}/>
