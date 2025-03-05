@@ -3,8 +3,23 @@
     margin: auto;
     --slide-height: 19rem;
     --slide-spacing: 1rem;
-    --slide-size: 20%;
+    --slide-size: 70%;
     overflow: hidden;
+  }
+  @media (min-width: 500px) {
+    .embla{
+      --slide-size: 40%;
+    }
+  }
+  @media (min-width: 767px) {
+    .embla{
+      --slide-size: 30%;
+    }
+  }
+  @media (min-width: 900px) {
+    .embla{
+      --slide-size: 20%;
+    }
   }
   .embla__viewport {
     overflow: hidden;
