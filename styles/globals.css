@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.image-holder{
+    aspect-ratio: 233/350;
+}
+
+.movie{
+    .image-holder{
+        aspect-ratio: 308/462;
+    }
+}

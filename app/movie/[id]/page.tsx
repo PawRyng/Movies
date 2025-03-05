@@ -21,7 +21,7 @@ interface MovieProps {
 
   
     return (
-        <section className="flex gap-4 flex-wrap sm:gap-1/12">
+        <section className="movie flex gap-4 flex-wrap sm:gap-1/12">
             <div className="w-full">
                 <BackButton />
             </div>
