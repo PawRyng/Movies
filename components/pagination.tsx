@@ -9,5 +9,12 @@ export default function PaginationSection({totalPages}:PaginationElementType) {
     const searchParams = useSearchParams()
     const currentPage = Number(searchParams.get('page')) || 1
 
-  return <Pagination className="mt-8 self-center" initialPage={currentPage} total={totalPages} onChange={(page) => router.push(`?page=${page}`)}/>;
+    const redirectHandler = (page:number) =>{
+      const queryParams = new URLSearchParams(window.location.search);
+      queryParams.set('page', String(page));
+
+      router.push(`${window.location.pathname}?${queryParams.toString()}`)
+    }
+
+  return <Pagination className="mt-8 self-center" initialPage={currentPage} total={totalPages} onChange={(page) => redirectHandler(page)}/>;
 }
