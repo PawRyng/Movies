@@ -17,4 +17,22 @@ export const siteConfig = {
       href: "/popular",
     },
   ],
+  sortParams: [
+    {
+      label: "Date ▲",
+      key: "release_date.asc",
+    },
+    {
+      label: "Date ▼",
+      key: "release_date.desc",
+    },
+    {
+      label: "Title ▲",
+      key: "title.asc",
+    },
+    {
+      label: "Title ▼",
+      key: "title.desc",
+    },
+  ],
 };

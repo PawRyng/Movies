@@ -6,6 +6,7 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
 export interface MoviesType {
   categoryType: "popular" | "top";
   page: string;
+  sort?: string;
 }
 
 export interface MovieType {
@@ -91,4 +92,13 @@ interface SpokenLanguage {
   english_name: string;
   iso_639_1: string;
   name: string;
+}
+
+export interface CategoryPageProps {
+  searchParams?: Promise<{ [key: string]: string | undefined } | undefined>;
+}
+export interface MovePageProps {
+  params: Promise<{
+    id: string;
+  }>;
 }
