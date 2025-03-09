@@ -10,14 +10,12 @@ const ServerComponent = dynamic(() => import("@/components/Listing/list"), {
   ssr: true,
 });
 
-// Define the async function to handle server-side logic
 export default async function Popular({
   searchParams,
 }:PageProps) {
-  // Use await on searchParams (to avoid sync access error)
   const { page } = (await searchParams) || { page: "1" };
   const { sort } = (await searchParams) || { sort: undefined };
-  // Ensure that 'page' is always a string
+  
   const currentPage = Array.isArray(page) ? page[0] : page || "1";
 
   const { totalPages, movies } = await useMovies({

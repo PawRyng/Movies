@@ -4,7 +4,6 @@ import { getRandomItems } from "@/controller/randomElement";
 import Link from "next/link";
 import "../styles/embla.css";
 
-// Define the async function to handle server-side logic
 export default async function Home() {
   const getPopular = await useMovies({ categoryType: "popular", page: "1" });
   const getTopRated = await useMovies({ categoryType: "top", page: "1" });
